@@ -1,0 +1,15 @@
+# General 
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode
+.DS_Store
+
+#Rust / Actix-web speicific
+Cargo.lock
+actix_api/target
+
+#React specific
+front_end/node_modules
