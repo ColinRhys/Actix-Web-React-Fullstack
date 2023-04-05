@@ -6,6 +6,6 @@ I created this project for a few reasons. I wanted to create a template for any 
 
 Still some things to finish up
 
-Docker \n
-General Code Cleanup \n
-More comments in the code so that I can always remember what I did and why. \n
+Docker <br>
+General Code Cleanup <br>
+More comments in the code so that I can always remember what I did and why. <br>
