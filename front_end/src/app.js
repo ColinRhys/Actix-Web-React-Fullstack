@@ -3,13 +3,9 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { PageLoader } from "./components/page-loader";
 import { ProtectedRoute } from "./components/protected-route";
-import { AdminPage } from "./pages/admin-page";
 import { CallbackPage } from "./pages/callback-page";
 import { HomePage } from "./pages/home-page";
 import { NotFoundPage } from "./pages/not-found-page";
-import { ProfilePage } from "./pages/profile-page";
-import { ProtectedPage } from "./pages/protected-page";
-import { PublicPage } from "./pages/public-page";
 import { ResultsPage } from "./pages/results-page";
 import { AdminApproval } from "./pages/admin-approval";
 import { UserDashboard } from "./pages/user-dashboard";
@@ -29,10 +25,6 @@ export const App = () => {
   return (
     <Switch>
       <Route path="/" exact component={HomePage} />
-      <ProtectedRoute path="/profile" component={ProfilePage} />
-      <Route path="/public" component={PublicPage} />
-      <ProtectedRoute path="/protected" component={ProtectedPage} />
-      <ProtectedRoute path="/admin" component={AdminPage} />
       <Route path="/callback" component={CallbackPage} />
       <Route path="/results" component={ResultsPage} />
       <ProtectedRoute path="/adminApproval" component={AdminApproval} />

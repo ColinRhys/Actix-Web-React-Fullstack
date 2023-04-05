@@ -10,13 +10,10 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 
 export const UpdateUserForm = () => {
-  const baseUrl = process.env.REACT_APP_BACKEND_URL;
   const dispatch = useDispatch();
   const { getAccessTokenSilently } = useAuth0();
 
