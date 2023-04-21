@@ -9,7 +9,7 @@
 
 #Rust / Actix-web speicific
 Cargo.lock
-actix_api/target
+backend/target
 
 #React specific
-front_end/node_modules
+frontend/node_modules

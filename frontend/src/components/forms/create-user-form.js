@@ -29,9 +29,9 @@ export const CreateUserForm = () => {
     const userEmail = user.email;
     const userUserName = userUserNameRef.current.value;
     const userAuth0Sub = user.sub.replace("auth0|", "");
-    const { data, error } = await checkUserName(userUserName, accessToken);
+    const { data } = await checkUserName(userUserName, accessToken);
     if (data === "UserName is free") {
-      const { data, error } = await createUser(
+      const { data } = await createUser(
         accessToken,
         userFirstName,
         userLastName,

@@ -32,7 +32,7 @@ export const UpdateUserForm = () => {
     const userFirstName = userFirstNameRef.current.value;
     const userLastName = userLastNameRef.current.value;
     const accessToken = await getAccessTokenSilently();
-    const { data, error } = await updateUser(
+    const { data } = await updateUser(
       userFirstName,
       userLastName,
       siteUserEmail,

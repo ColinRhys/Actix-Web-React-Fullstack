@@ -1,2 +1,59 @@
-# docker-compose.yml
+version: "3"
 
+services:
+  backend:
+    container_name: backend
+    build: 
+      context: ./backend
+    working_dir: /app
+    entrypoint: /app/run.sh
+    ports:
+      - 8081:8081
+    depends_on:
+      - postgres
+    volumes:
+      - Backend:/app
+    networks:
+      - internal
+  
+  frontend:
+    container_name: frontend
+    build: 
+      context: ./frontend
+    ports:
+      - 4040:4040
+    depends_on:
+      - postgres
+      - backend
+    volumes:
+      #- Frontend:/app  # aws enable it back
+      - ./frontend:/app # development enable it
+      - /app/node_modules
+    networks:
+      - internal
+
+  postgres:
+    container_name: postgres
+    image: postgres:13
+    ports:
+      - "127.0.0.1:5433:5432"
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - internal
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "I91pupcrLLk3m2"
+      POSTGRES_DB: "rocket_postgres"
+    
+      
+networks:
+  internal:
+      driver: bridge
+
+      
+volumes:
+  db_data:
+  Frontend:
+  Backend:

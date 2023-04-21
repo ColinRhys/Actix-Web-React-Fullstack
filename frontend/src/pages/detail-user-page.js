@@ -7,9 +7,6 @@ export const DetailUser = () => {
   const url = new URLSearchParams(window.location.search);
   console.log("The url is - " + url);
   const userName = url.get("userUserName");
-  const userUserNameFromURL = console.log(
-    "The UserName pulled from the url is - " + userName
-  );
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

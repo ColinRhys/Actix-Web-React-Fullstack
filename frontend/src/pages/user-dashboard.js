@@ -11,6 +11,8 @@ export const UserDashboard = () => {
   const dispatch = useDispatch();
   const siteUser = useSelector((state) => state.siteUser.firstName);
   const { user } = useAuth0();
+  console.log(user);
+  console.log("This is the users email - " + user.email);
   const userSubFormatted = user.sub.replace("auth0|", "");
   var url =
     baseUrl + "/findUserByEmailAndSub/" + user.email + "/" + userSubFormatted;
