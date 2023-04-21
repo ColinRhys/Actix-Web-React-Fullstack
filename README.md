@@ -6,7 +6,9 @@ I created this project for a few reasons. I wanted to create a template for any 
 
 App have been dockerized can run with "docker-compose up"
 
-Still some things to finish up
+Still some things to finish up:
 
 General Code Cleanup <br>
 More comments in the code so that I can always remember what I did and why. <br>
+Better write up of the project here <br>
+All routes in frontend being called correct way <br>
