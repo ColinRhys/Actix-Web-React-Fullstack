@@ -12,3 +12,6 @@ General Code Cleanup <br>
 More comments in the code so that I can always remember what I did and why. <br>
 Better write up of the project here <br>
 All routes in frontend being called correct way <br>
+Tests <br>
+- Frontend <br>
+- Backend <br>
