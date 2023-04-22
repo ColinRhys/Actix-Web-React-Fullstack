@@ -8,6 +8,10 @@ App have been dockerized can run with "docker-compose up"
 
 Still some things to finish up:
 
+Write up: <br>
+- Auth0 <br>
+  - Rule for permissions / role on user sign up <br>
+
 General Code Cleanup <br>
 More comments in the code so that I can always remember what I did and why. <br>
 Better write up of the project here <br>

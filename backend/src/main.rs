@@ -58,7 +58,7 @@ async fn main() -> std::io::Result<()> {
             .service(handlers::find_user_by_user_name)
             .service(handlers::find_user_by_email_and_sub)
     })
-    .bind(("127.0.0.1", 8081))?
+    .bind(("0.0.0.0", 8081))?
     .run()
     .await
 }
